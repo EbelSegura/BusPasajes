@@ -17,6 +17,7 @@ namespace BusPasajes.Controllers
             using (var bd = new BDPasajeEntities())
             {
                 lstmarca = (from marca in bd.Marca
+                            where marca.BHABILITADO == 1
                             select new MarcaCLS
                             {
                                 iidmarca = marca.IIDMARCA,

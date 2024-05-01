@@ -9,9 +9,14 @@
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
-            <td># de Marca</td>
-            <td>Nombre Marca</td>
-            <td>Descripción</td>
+            <td width="10%"># de Marca</td>
+            <td width="20%">Nombre Marca</td>
+            <td width="70%">Descripción</td>
+            @* //TOMA EL DISPLAY QUE SE TIENE DENTRO DE LA CLASE Y LO MARCA EN LA VISTA
+            <td width="10%">@Html.LabelFor(p => Model[0].iidmarca)</td>
+            <td width="20%">@Html.LabelFor(p => Model[0].nombre)</td>
+            <td width="70%">@Html.LabelFor(p => Model[0].descripcion)</td>
+            *@
         </tr>
     </thead>
     <tbody>
