@@ -11,10 +11,14 @@ namespace BusPasajes.Models
         [Display(Name = "# de Marca")]
         public int iidmarca { get; set; }
 
+        [Required]
+        [StringLength(100, ErrorMessage = "la longitd maxima es de 100")]
         [Display(Name = "Nombre Marca")]
         public string nombre { get; set; }
 
-        [Display(Name = "Descripcion")]
+        [Required]
+        [StringLength(200, ErrorMessage = "la longitd maxima es de 200")]
+        [Display(Name = "descripción")]
         public string descripcion { get; set; }
 
         public int bhabilitado { get; set; }

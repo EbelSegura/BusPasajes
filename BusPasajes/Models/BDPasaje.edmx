@@ -28,7 +28,7 @@
           <Property Name="NUMEROFILAS" Type="int" />
           <Property Name="NUMEROCOLUMNAS" Type="int" />
           <Property Name="BHABILITADO" Type="int" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="200" />
+          <Property Name="descripcion" Type="varchar" MaxLength="200" />
           <Property Name="OBSERVACION" Type="varchar" MaxLength="200" />
           <Property Name="IIDMARCA" Type="int" />
         </EntityType>
@@ -83,7 +83,7 @@
           </Key>
           <Property Name="IIDLUGAR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="200" />
+          <Property Name="descripcion" Type="varchar" MaxLength="200" />
           <Property Name="BHABILITADO" Type="int" />
         </EntityType>
         <EntityType Name="Marca">
@@ -92,7 +92,7 @@
           </Key>
           <Property Name="IIDMARCA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="200" />
+          <Property Name="descripcion" Type="varchar" MaxLength="200" />
           <Property Name="BHABILITADO" Type="int" />
         </EntityType>
         <EntityType Name="Modelo">
@@ -101,7 +101,7 @@
           </Key>
           <Property Name="IIDMODELO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="200" />
+          <Property Name="descripcion" Type="varchar" MaxLength="200" />
           <Property Name="BHABILITADO" Type="int" />
         </EntityType>
         <EntityType Name="Pagina">
@@ -120,7 +120,7 @@
           </Key>
           <Property Name="IIDROL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+          <Property Name="descripcion" Type="varchar" MaxLength="100" />
           <Property Name="BHABILITADO" Type="int" />
         </EntityType>
         <EntityType Name="RolPagina">
@@ -168,7 +168,7 @@
           </Key>
           <Property Name="IIDTIPOBUS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="200" />
+          <Property Name="descripcion" Type="varchar" MaxLength="200" />
           <Property Name="BHABILITADO" Type="int" />
         </EntityType>
         <EntityType Name="TipoContrato">
@@ -186,7 +186,7 @@
           <Property Name="IIDTIPOUSUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NOMBRE" Type="varchar" MaxLength="150" />
           <Property Name="BHABILITADO" Type="int" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="250" />
+          <Property Name="descripcion" Type="varchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="TIPOUSUARIOREGISTRO">
           <Key>
@@ -636,7 +636,7 @@
           <Property Name="NUMEROFILAS" Type="Int32" />
           <Property Name="NUMEROCOLUMNAS" Type="Int32" />
           <Property Name="BHABILITADO" Type="Int32" />
-          <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="OBSERVACION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="IIDMARCA" Type="Int32" />
           <NavigationProperty Name="Marca" Relationship="Self.FK__Bus__IIDMARCA__36B12243" FromRole="Bus" ToRole="Marca" />
@@ -707,7 +707,7 @@
           </Key>
           <Property Name="IIDLUGAR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="BHABILITADO" Type="Int32" />
           <NavigationProperty Name="Viaje" Relationship="Self.FK__Viaje__IIDLUGARD__3A81B327" FromRole="Lugar" ToRole="Viaje" />
           <NavigationProperty Name="Viaje1" Relationship="Self.FK__Viaje__IIDLUGARO__398D8EEE" FromRole="Lugar" ToRole="Viaje" />
@@ -718,7 +718,7 @@
           </Key>
           <Property Name="IIDMARCA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="BHABILITADO" Type="Int32" />
           <NavigationProperty Name="Bus" Relationship="Self.FK__Bus__IIDMARCA__36B12243" FromRole="Marca" ToRole="Bus" />
         </EntityType>
@@ -728,7 +728,7 @@
           </Key>
           <Property Name="IIDMODELO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="BHABILITADO" Type="Int32" />
           <NavigationProperty Name="Bus" Relationship="Self.FK__Bus__IIDMODELO__276EDEB3" FromRole="Modelo" ToRole="Bus" />
         </EntityType>
@@ -749,7 +749,7 @@
           </Key>
           <Property Name="IIDROL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="BHABILITADO" Type="Int32" />
           <NavigationProperty Name="RolPagina" Relationship="Self.FK__RolPagina__IIDRO__6383C8BA" FromRole="Rol" ToRole="RolPagina" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__IIDROL__5EBF139D" FromRole="Rol" ToRole="Usuario" />
@@ -804,7 +804,7 @@
           </Key>
           <Property Name="IIDTIPOBUS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="BHABILITADO" Type="Int32" />
           <NavigationProperty Name="Bus" Relationship="Self.FK__Bus__IIDTIPOBUS__267ABA7A" FromRole="TipoBus" ToRole="Bus" />
         </EntityType>
@@ -824,7 +824,7 @@
           <Property Name="IIDTIPOUSUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOMBRE" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="BHABILITADO" Type="Int32" />
-          <Property Name="DESCRIPCION" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IIDTIP__29572725" FromRole="TipoUsuario" ToRole="Empleado" />
         </EntityType>
         <EntityType Name="TIPOUSUARIOREGISTRO">
@@ -1287,7 +1287,7 @@
                 <ScalarProperty Name="NUMEROFILAS" ColumnName="NUMEROFILAS" />
                 <ScalarProperty Name="NUMEROCOLUMNAS" ColumnName="NUMEROCOLUMNAS" />
                 <ScalarProperty Name="BHABILITADO" ColumnName="BHABILITADO" />
-                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
                 <ScalarProperty Name="IIDMARCA" ColumnName="IIDMARCA" />
               </MappingFragment>
@@ -1346,7 +1346,7 @@
               <MappingFragment StoreEntitySet="Lugar">
                 <ScalarProperty Name="IIDLUGAR" ColumnName="IIDLUGAR" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="BHABILITADO" ColumnName="BHABILITADO" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1356,7 +1356,7 @@
               <MappingFragment StoreEntitySet="Marca">
                 <ScalarProperty Name="IIDMARCA" ColumnName="IIDMARCA" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="BHABILITADO" ColumnName="BHABILITADO" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1366,7 +1366,7 @@
               <MappingFragment StoreEntitySet="Modelo">
                 <ScalarProperty Name="IIDMODELO" ColumnName="IIDMODELO" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="BHABILITADO" ColumnName="BHABILITADO" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1387,7 +1387,7 @@
               <MappingFragment StoreEntitySet="Rol">
                 <ScalarProperty Name="IIDROL" ColumnName="IIDROL" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="BHABILITADO" ColumnName="BHABILITADO" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1440,7 +1440,7 @@
               <MappingFragment StoreEntitySet="TipoBus">
                 <ScalarProperty Name="IIDTIPOBUS" ColumnName="IIDTIPOBUS" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="BHABILITADO" ColumnName="BHABILITADO" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1460,7 +1460,7 @@
                 <ScalarProperty Name="IIDTIPOUSUARIO" ColumnName="IIDTIPOUSUARIO" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
                 <ScalarProperty Name="BHABILITADO" ColumnName="BHABILITADO" />
-                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

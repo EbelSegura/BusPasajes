@@ -30,7 +30,7 @@ namespace BusPasajes.Models
         public Nullable<int> NUMEROFILAS { get; set; }
         public Nullable<int> NUMEROCOLUMNAS { get; set; }
         public Nullable<int> BHABILITADO { get; set; }
-        public string DESCRIPCION { get; set; }
+        public string descripcion { get; set; }
         public string OBSERVACION { get; set; }
         public Nullable<int> IIDMARCA { get; set; }
     

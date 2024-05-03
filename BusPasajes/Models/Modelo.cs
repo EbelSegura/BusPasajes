@@ -22,7 +22,7 @@ namespace BusPasajes.Models
     
         public int IIDMODELO { get; set; }
         public string NOMBRE { get; set; }
-        public string DESCRIPCION { get; set; }
+        public string descripcion { get; set; }
         public Nullable<int> BHABILITADO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

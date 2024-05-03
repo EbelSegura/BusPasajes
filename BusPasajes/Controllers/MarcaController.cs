@@ -22,10 +22,38 @@ namespace BusPasajes.Controllers
                             {
                                 iidmarca = marca.IIDMARCA,
                                 nombre = marca.NOMBRE,
-                                descripcion = marca.DESCRIPCION
+                                descripcion = marca.descripcion
                             }).ToList();
             }
             return View(lstmarca);
+        }
+
+        public ActionResult Agregar()
+        {
+            
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Agregar(MarcaCLS oMarcaCLS)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(oMarcaCLS);
+            }
+            else
+            {
+                using (var bd = new BDPasajeEntities())
+                {
+                    Marca oMarca = new Marca();
+                    oMarca.NOMBRE = oMarcaCLS.nombre;
+                    oMarca.descripcion = oMarcaCLS.descripcion;
+                    oMarca.BHABILITADO = 1;
+                    bd.Marca.Add(oMarca);
+                    bd.SaveChanges();
+                }
+            }
+            return RedirectToAction("Index");
         }
     }
 }
