@@ -20,7 +20,7 @@ namespace BusPasajes.Controllers
                                on empleado.IIDTIPOUSUARIO equals TipoUsuario.IIDTIPOUSUARIO
                                join TipoContrato in bd.TipoContrato
                                on empleado.IIDTIPOCONTRATO equals TipoContrato.IIDTIPOCONTRATO
-                              where empleado.BHABILITADO == 1
+                              where empleado.BHABILITADO == 1 
                               select new EmpleadoCLS
                               {
                                   iidempleado = empleado.IIDEMPLEADO,
