@@ -1,0 +1,35 @@
+﻿@using BusPasajes.Models;
+@model List<EmpleadoCLS>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Empleado</h2>
+<br />
+<br />
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td># De Empleado</td>
+            <td>Nombre</td>
+            <td>Apellido Paterno</td>
+            <td>Apellido Materno</td>
+            <td>Nombre Tipo Usuario</td>
+            <td>Nombre Tipo Contrato</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.iidempleado</td>
+                <td>@item.nombre</td>
+                <td>@item.appaterno</td>
+                <td>@item.apmaterno</td>
+                <td>@item.nombretipousuario</td>
+                <td>@item.nombretipocontrato</td>
+            </tr>
+        }
+    </tbody>
+</table>
